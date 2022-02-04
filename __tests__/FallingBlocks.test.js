@@ -15,12 +15,12 @@ describe("Falling blocks", () => {
     );
   });
 
-  xdescribe("When a block is dropped", () => {
+  describe("When a block is dropped", () => {
     beforeEach(() => {
       board.drop(new Block("X"));
     });
 
-    xit("it starts from the top middle", () => {
+    it("it starts from the top middle", () => {
       expect(board.toString()).toEqualShape(
         `.X.
          ...
@@ -40,9 +40,9 @@ describe("Falling blocks", () => {
 
     xit("at most one block may be falling at a time", () => {
       const before = board.toString();
-      expect(() => board.drop(new Block("Y"))).to.throw("already falling");
+      expect(() => board.drop(new Block("Y"))).toThrow("already falling");
       const after = board.toString();
-      expect(after).to.equal(before);
+      expect(after).toEqual(before);
     });
   });
 
@@ -62,7 +62,7 @@ describe("Falling blocks", () => {
       expect(
         board.hasFalling(),
         "the player should still be able to move the block"
-      ).to.be.true;
+      ).toBe(true);
     });
 
     xit("it stops when it hits the bottom", () => {
@@ -96,7 +96,7 @@ describe("Falling blocks", () => {
       expect(
         board.hasFalling(),
         "the player should still be able to move the block"
-      ).to.be.true;
+      ).toBe(true);
     });
 
     xit("it stops when it hits the other block", () => {

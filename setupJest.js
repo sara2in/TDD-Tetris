@@ -15,7 +15,7 @@ Expected:
 ${printExpected(expected)}
 Received: 
 ${printReceived(received)}`;
-    // new Assertion(actual).to.be.a("string");
+    // new Assertion(actual).to.be.a("string"); //
 
     if (typeof actual !== "string") {
       throw new Error(`expected actual to be a string`);
