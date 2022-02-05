@@ -73,7 +73,7 @@ describe("Falling blocks", () => {
          ...
          .X.`
       );
-      expect(board.hasFalling(), "the block should stop moving").to.be.false;
+      expect(board.hasFalling(), "the block should stop moving").toBe(false);
     });
   });
 
@@ -107,7 +107,7 @@ describe("Falling blocks", () => {
          .Y.
          .X.`
       );
-      expect(board.hasFalling(), "the block should stop moving").to.be.false;
+      expect(board.hasFalling(), "the block should stop moving").toBe(false);
     });
   });
 });
